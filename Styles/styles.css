@@ -256,7 +256,7 @@ a, .btn{
 
 .social-icon:hover,
 .social-icon:active {
-	color: #db3e88;
+	color: #00abf0;
 	transform: scale(1.2);
 }
 
@@ -271,7 +271,7 @@ a, .btn{
 
 .social-icon-light:hover,
 .social-icon-light:active {
-	color: #db3e88;
+	color: #00abf0;
 	transform: scale(1.2);
 }
 
