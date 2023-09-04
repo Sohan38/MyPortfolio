@@ -91,11 +91,24 @@ a, .btn{
 }
 
 .nav-links:hover,
-.nav-links:active{
-	border-bottom: 1px solid #3e65db;
-	padding-bottom: 5px;
-
+.nav-links.active{
+	color: #00abf0;
+	font-weight: 600;
 }
+
+.nav-links:hover{
+	padding-bottom: 5px;
+	border-bottom: 1px solid #3e65db;
+}
+
+#menu-icon{
+	font-size: 2.8rem;
+	color: #ededed;
+	cursor: pointer;
+	display: none;
+}
+
+
 
 .nav-btn:link,
 .nav-btn:visited {
@@ -145,7 +158,7 @@ a, .btn{
 	grid-template-columns: 1.05fr 0.95fr;
 	margin: 0 auto;
 	max-width: 130rem;
-	padding: 0 10rem;
+	padding: 0 3.2rem;
 	gap: 10rem;
 }
 
@@ -243,37 +256,52 @@ a, .btn{
 	margin-top: 5.2rem;
 	gap: 1.2rem;
 	
+	
 }
 
-.social-icon,
-.social-icon:link,
-.social-icon:visited {
-	color: #fdf2e9;
+.social-icon {
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: #00abf0;
 	font-size: 3rem;
 	margin-right: 0.8rem;
 	transition: all 0.2s;
+	background: transparent;
+	border: .2rem solid #00abf0;
+	border-radius: 50%;
+	width: 3.5rem;
+	height: 3.5rem;
+	padding: 0.4rem;
+	z-index: 1;
+	overflow: hidden;
+	
 }
 
-.social-icon:hover,
-.social-icon:active {
-	color: #00abf0;
+.social-icon:hover{
+	color: #050505;
+}
+
+.social-icon::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	background: #00abf0;
+	z-index: -1;
+	transition: 1s;
+}
+
+.social-icon:hover::before{
+	width: 100%;
+	
 	transform: scale(1.2);
 }
 
-.social-icon-light,
-.social-icon-light:link,
-.social-icon-light:visited {
-	color: #343a40;
-	font-size: 3rem;
-	margin-right: 0.8rem;
-	transition: all 0.2s;
-}
-
-.social-icon-light:hover,
-.social-icon-light:active {
-	color: #00abf0;
-	transform: scale(1.2);
-}
 
 
 .hero-img {
@@ -383,4 +411,21 @@ a, .btn{
 	line-height: 1.4;
 	margin: 1.2rem 0 3.2rem 0;
 	letter-spacing: -0.2rem;
+}
+
+
+.section-divider {
+	border-top: 1px solid rgba(192, 192, 192, 0.25);
+	border-bottom: 1px solid rgba(192, 192, 192, 0.25);
+}
+
+.container {
+	max-width: 120rem;
+	padding: 0 3.2rem;
+	margin: 0 auto;
+}
+
+.container-mid {
+	max-width: 125rem;
+	margin: 0 auto;
 }
