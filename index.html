@@ -6,6 +6,7 @@
     <title>Sohan- Developer Portfolio</title>
     <link rel="stylesheet" href="Styles/styles.css">
     <link rel="stylesheet" href="Styles/space.css">
+    <link rel="stylesheet" href="Styles/queries.css">
     <link rel="stylesheet"href="https://kit-pro.fontawesome.com/releases/v6.2.0/css/pro.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,13 +15,10 @@
 </head>
 <body>
     <div id="stars">
-        ::after
     </div>
     <div id="stars2">
-        ::after
     </div>
     <div id="stars3">
-        ::after
     </div>
 
     <header class="header">
@@ -29,16 +27,17 @@
             <h1 class = "logo-text">sohan</h1>
 
         </div>
+        
+        <div class="fa-light fa-bars" id="menu-icon"></div>
 
         <nav class = "nav-bar">
             <ul class="nav-list">
-
-            <li >
-                <a class="nav-links" href="#">Home</a>
+            <li>
+                <a class="nav-links active" href="#Home">Home</a>
             </li> 
 
             <li >
-                <a class="nav-links" href="#About">About me</a>
+                <a class="nav-links" href="#Aboutme">About me</a>
             </li>
 
             <li>
@@ -46,7 +45,7 @@
             </li>
 
             <li>
-                <a class="nav-links" href="#WprkWithMe">Work With me</a>
+                <a class="nav-links" href="#WorkWithMe">Work With me</a>
             </li>
 
             <li>
@@ -65,7 +64,7 @@
             <div class="hero">
                 <div class="hero-text-part">
                     <h1 class="heading-primary">Hello World, I am 
-                        <span class="gradient-text">Sohan</span><br>A Student and<br><span class="gradient-text">Developer</span> from nepal
+                        <span class="gradient-text">Sohan</span><br>A Student and<br><span class="gradient-text">Developer</span> from Nepal
                         
                     </h1>
                     
@@ -82,23 +81,23 @@
                     </div>
 
                     <div class="social-links">
-                        <a href="www.twitter.com">
-                        <i class="fa-brands fa-twitter social-icon"></i>
+                        <a class="social-icon" href="https://twitter.com/?lang=en" target="_blank">
+                        <i class="fa-brands fa-twitter "></i>
                         </a>
-                        <a href="www.linkdin.com">
-                        <i class="fa-brands fa-linkedin social-icon">
+                        <a class="social-icon" href="https://www.linkedin.com" target="_blank">
+                        <i class="fa-brands fa-linkedin">
                         </i>
                         </a>
-                        <a href="www.github.com">
-                        <i class="fa-brands fa-github social-icon"></i>
+                        <a class="social-icon" href="https://github.com" target="_blank">
+                        <i class="fa-brands fa-github "></i>
                         </i>
                         </a>
-                        <a href="www.facebook.com">
-                        <i class="fa-brands fa-facebook social-icon"></i>
+                        <a class="social-icon" href="https://www.facebook.com" target="_blank">
+                        <i class="fa-brands fa-facebook "></i>
                         </i>
                         </a>
-                        <a href="www.instagram.com">
-                        <i class="fa-brands fa-instagram social-icon"></i>
+                        <a class="social-icon" href="https://www.instagram.com" target="_blank">
+                        <i class="fa-brands fa-instagram "></i>
                         </i>
                         </a>
                     </div>
@@ -113,10 +112,14 @@
                     <img class="hero-img" src="assets/hero-img.svg" alt="hero.png">
                     
                 </div> 
-                
             </div>
-            
         </section>
+
+        <section class="skills section-divider" id="skills">
+            <h2 class="subheading" style="text-align: center;">I have experience with</h2>
+            <div class="container"></div>
+        </section>
+
     </main>
 
 
