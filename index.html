@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sohan- Developer Portfolio</title>
+    <link rel="stylesheet" href="Styles/general.css">
     <link rel="stylesheet" href="Styles/styles.css">
-    <link rel="stylesheet" href="Styles/space.css">
     <link rel="stylesheet" href="Styles/queries.css">
+    <link rel="stylesheet" href="Styles/space.css">
+    
+    
     <link rel="stylesheet"href="https://kit-pro.fontawesome.com/releases/v6.2.0/css/pro.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Signika:wght@700&display=swap" rel="stylesheet" />
+
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script defer src="Script/script.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script type="text/javascript">emailjs.init('Lil8k1NHYx7IF66ui')</script>
+
+
    
 </head>
 <body>
@@ -33,33 +45,39 @@
         <nav class = "nav-bar">
             <ul class="nav-list">
             <li>
-                <a class="nav-links active" href="#Home">Home</a>
+                <a class="nav-links active" href="#">Home</a>
             </li> 
 
             <li >
-                <a class="nav-links" href="#Aboutme">About me</a>
+                <a class="nav-links" href="#about-me">About me</a>
             </li>
 
             <li>
-                <a class="nav-links" href="#Services">Services</a>
+                <a class="nav-links" href="#services">Services</a>
             </li>
 
             <li>
-                <a class="nav-links" href="#WorkWithMe">Work With me</a>
+                <a class="nav-links" href="#cta">Work With me</a>
             </li>
 
             <li>
-                <a class="nav-links" href="#Projects">Projects</a>
+                <a class="nav-links" href="#">Projects</a>
             </li>
 
             </ul>
-            <a class ="nav-links nav-btn" href="#Contact">Contact me</a>
+            <a class ="nav-links nav-btn" href="#cta">Contact me</a>
+
+            
         </nav>
+        <button class="btn-mobile-nav">
+          <i name="menu" class="fa-solid fa-bars mobile-icon-nav gradient-text"></i>
+          <i name="close" class="fa-solid fa-xmark mobile-icon-nav gradient-text"></i>
+        </button>
 
         
     </header>
 
-    <main class="main">
+    <main class="main" id="blur">
         <section class="section-hero">
             <div class="hero">
                 <div class="hero-text-part">
@@ -74,13 +92,13 @@
                        </p>
 
                     </div>
-                    <div class="btn-box">
-                        <a class="btn-hero" href="" >Hire me now</a>
-                        <a class="btn-hero" href="" >See my Resume<i class="fa-sharp fa-solid fa-eye dl--icon"></i></a>
+                    <div class="hero-btn">
+                        <a class="btn btn--full margin-right-sm" href="" >Hire me now</a>
+                        <a class="btn btn--full margin-right-sm" href="" >See my Resume<i class="fa-sharp fa-solid fa-eye dl--icon"></i></a>
 
                     </div>
 
-                    <div class="social-links">
+                    <div class="social-links flex--social">
                         <a class="social-icon" href="https://twitter.com/?lang=en" target="_blank">
                         <i class="fa-brands fa-twitter "></i>
                         </a>
@@ -115,15 +133,363 @@
             </div>
         </section>
 
-        <section class="skills section-divider" id="skills">
-            <h2 class="subheading" style="text-align: center;">I have experience with.. </h2>
-            <div class="container"></div>
-        </section>
-
-    </main>
-
-
+        <section class="section-skills section-divider">
+            <div class="container reveal">
+              <h2 class="subheading center-text ">I have experience with</h2>
+              <div class="logos ">
+                <div class="logo">
+                  <i class="fa-brands fa-html5"></i>
+                  <span class="logo-desc">HTML5</span>
+                </div>
+                <div class="logo">
+                  <i class="fa-brands fa-css3-alt"></i>
+                  <span class="logo-desc">CSS3</span>
+                </div>
+                <div class="logo">
+                  <i class="fa-brands fa-js"></i>
+                  <span class="logo-desc">JS</span>
+                </div>
+                <div class="logo">
+                  <i class="fa-brands fa-react"></i>
+                  <span class="logo-desc">React</span>
+                </div>
+                <div class="logo">
+                  <i class="fa-brands fa-java"></i>
+                  <span class="logo-desc">Java</span>
+                </div>
+                <div class="logo">
+                  <i class="fa-brands fa-python"></i>
+                  <span class="logo-desc">Python</span>
+                </div>
+                <div class="logo">
+                  <i class="fa-brands fa-node"></i>
+                  <span class="logo-desc">Node.js</span>
+                </div>
+                <div class="logo">
+                  <i class="fa-solid fa-database"></i>
+                  <span class="logo-desc">MySql</span>
+                </div>
+              </div>
+            </div>
+          </section>
     
-    <script src="Script.js"></script>
+          <section class="section-services" id="services">
+            <div class="container center-text ">
+              <span class="subheading margin-gap reveal">Services</span>
+              <h1 class="heading-primary font-size--max margin-gap reveal">
+                See the <span class="gradient-text font-size--max"
+                  >services</span
+                > I offer..
+              </h1>
+              <p class="services-description reveal">
+                If you are looking for someone who will build solid and scalable
+                e-products for you, then you're at the right place.
+              </p>
+            </div>
+    
+            <div class="container grid grid--3-cols margin-bottom-md reveal">
+              <div class="services-box">
+                <div class="gradient-border"></div>
+                <img
+                  class="service-img"
+                  src="assets/services/web-design.svg"
+                  alt="Web Design"
+                />
+                <div class="service-content">
+                  <h1 class="service-title heading-tertiary">
+                    Responsive website design
+                  </h1>
+                  <ul class="service-details">
+                    <li class="service-detail">
+                      <i class="fa-regular fa-moon-stars service-icon"></i>Clean and
+                      attractive design
+                    </li>
+                    <li class="service-detail">
+                      <i class="fa-solid fa-laptop-mobile service-icon"></i
+                      >Browsable on any device
+                    </li>
+                    <li class="service-detail">
+                      <i class="fa-regular fa-face-smile-hearts service-icon"></i
+                      >Functional and User-Friendly
+                    </li>
+                    <li class="service-detail">
+                      <i class="fa-brands fa-searchengin service-icon"></i>Optimized
+                      for Google Search
+                    </li>
+    
+                    <li class="service-detail">
+                      <i class="fa-regular fa-shield-check"></i>Secured over the
+                      Internet
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="services-box">
+                <div class="gradient-border"></div>
+    
+                <img
+                  class="service-img"
+                  src="assets/services/app-development.svg"
+                  alt="Web Design"
+                />
+                <div class="service-content">
+                  <h1 class="service-title heading-tertiary">
+                    An app for your business
+                  </h1>
+                  <ul class="service-details">
+                    <li class="service-detail">
+                      <i class="fa-regular fa-moon-stars service-icon"></i>
+                      Smooth UI & Performance
+                    </li>
+                    <li class="service-detail">
+                      <i class="fa-regular fa-mobile service-icon"></i>OS
+                      Independent (Both iOS & Android)
+                    </li>
+                    <li class="service-detail">
+                      <i class="fa-regular fa-cloud-arrow-down service-icon"></i
+                      >Regular Updates
+                    </li>
+                    <li class="service-detail">
+                      <i class="fa-solid fa-sliders service-icon"></i>Easily
+                      Customizable
+                    </li>
+    
+                    <li class="service-detail">
+                      <i class="fa-regular fa-shield-check"></i>Secured over the
+                      Internet
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="services-box last-service">
+                <div class="gradient-border"></div>
+    
+                <img
+                  class="service-img"
+                  src="assets/services/back-end.svg"
+                  alt="Web Design"
+                />
+                <div class="service-content">
+                  <h1 class="service-title heading-tertiary">
+                    Server-side development
+                  </h1>
+                  <ul class="service-details">
+                    <li class="service-detail">
+                      <i class="fa-regular fa-database service-icon"></i>Build
+                      reliable database
+                    </li>
+                    <li class="service-detail">
+                      <i class="fa-regular fa-face-smile-hearts service-icon"></i
+                      >Ensured quality user experience
+                    </li>
+                    <li class="service-detail">
+                      <i class="fa-regular fa-screwdriver-wrench service-icon"></i
+                      >Maintainable server mechanisms
+                    </li>
+                    <li class="service-detail">
+                      <i class="fa-regular fa-objects-column services-icon"></i
+                      >Efficient client data management
+                    </li>
+    
+                    <li class="service-detail">
+                      <i class="fa-regular fa-shield-check"></i>Ensured Security
+                      over internet
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+    
+          <section class="section-about-me section-divider" id="about-me">
+            <div class="container-mid center-text ">
+              <span  class="subheading margin-gap reveal">About me</span>
+              <h1  class="heading-primary font-size--max margin-gap reveal">
+                So who <span class="gradient-text font-size--max">am I</span
+                > ?
+              </h1>
+              <div class="about-me reveal">
+                <picture>
+                  <img class="abt-me-img" src="assets/about-me-img.svg" alt="A guy - code thinking"/>
+                </picture>
+                <div class="about-me-text">
+                  <p style="margin-bottom: 0;" class="description-text-about line-height-max reveal">
+                    I am <span class="gradient-text">Sohan Shrestha</span>
+                    from Pokhara, Nepal. I am currently an active student pursuing bachelors degree on information technology.
+                    I have more than a year of experience on web development, during this phase I have accomplished few to many beginner to intermediate level of web projects.<br><br>
+                    Besides that, I also have worked on and have prior knowledge on back-end systems and database.
+                    Currently I'm learning about new frameworks and libraries to uplift my work-rate to the <span class="gradient-text">next level.</span></p>
+                </div>
+              </div>
+              <div class="about-me-footer">
+    
+                <span class="subheading reveal">To know more about me, Connect with me here</span>
+                <div class="social-links flex--social reveal">
+                  <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter social-icon"></i></a>
+                  <a href="http://www.linkedin.com" target="_blank"
+                    ><i class="fa-brands fa-linkedin social-icon"></i></a>
+                  <a href="https://www.github.com/supSugam" target="_blank"><i class="fa-brands fa-github social-icon"></i></a>
+                  <a href="https://www.facebook.com/supSugam" target="_blank"><i class="fa-brands fa-facebook social-icon"></i></a>
+                  <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram social-icon"></i></a>
+                </div>
+              </div>
+          </section>
+    
+    
+          <section class="section-cta" id="cta">
+            <div class="container-mid center-text ">
+              <span  class="subheading margin-gap reveal">Work with me</span>
+              <h1  class="heading-primary margin-gap reveal">
+                Send me a
+                <span class="heading-primary gradient-text font-size--max"
+                  >message !</span
+                >
+              </h1>
+              <p class="cta-description reveal">
+                Even though I'm currencty an active student, I am open to face any work challenges to grow further.
+                So, please feel free to reach to me so we can team-up and get the projects on your mind done!<br>
+                <i style="font-size: 2rem;" class="fa-solid fa-face-smile-hearts"></i>
+              </p>
+    
+    
+    
+    
+                <div class="cta container center-text ">
+    
+                  <div class="message-box">
+                    <p class="heading-secondary reveal">Have any question or proposal,<br>or just want
+                      to say <span class="gradient-text">hello ?</span>👋</p>
+    
+        
+    
+                    <form id="form" class="cta-form reveal">
+    
+    
+                      <div class="cta-name">
+                        <i class="fa-solid fa-user form-icon"></i>
+    
+                        <input id="full-name" type="text" placeholder="Full Name" name="full-name" required="">
+                      </div>
+    
+                      <div class="cta-email">
+                        <i class="fa-solid fa-envelope form-icon"></i>
+                        <input id="email" type="email" placeholder="Your Email Address" name="email" required="">
+                      </div>
+    
+                      <div class="cta-message">
+                        <i class="fa-solid fa-message-text form-icon flip-horizontally"></i>
+                        <textarea class="message-field" id="message" name="message" placeholder="Type Your Message" maxlength="5000"></textarea>
+                      </div>
+    
+                      <div class="cta-select">
+                        <i class="fa-solid fa-square-chevron-down form-icon"></i>
+    
+                        <label for="select-where">Where did you heard about me ?</label>
+                        <select id="select-where" name="select" required="">
+                          <option value="">Please choose one option:</option>
+                          <option value="friends">From Someone you know</option>
+                          <option value="search-engine">From Search Engine</option>
+                          <option value="social">From Social Media</option>
+                          <option value="irl">I know you in person</option>
+                          <option value="others">Others</option>
+                        </select>
+                      </div>
+                      <div class="cta-submit">
+                        <button type="submit" id="button" style="padding: 0;" class="btn btn--submit key">
+    
+                          <div class="btn--submit-content">
+                            Send It! <i class="fa-solid fa-paper-plane-top"></i>
+                          </div>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="image-box reveal">
+                    <img class="cta-img" src="assets/cta-img.svg" alt="A guy">
+                  </div>
+    
+                </div>
+          </section>
+          
+        </main> 
+    
+        <aside class="popup-aside ">
+          <div class="popup-box">
+    
+            <div class="popup" id="popup">
+              <i class="fa-solid fa-envelope-circle-check popup-icon gradient-text"></i>
+              <h2 class="gradient-text">Thank You!</h2>
+              <p>Your message has been sent, I'll  get to you as soon as I can.</p>
+              <button onclick="closePopup()" type="button">OK</button>
+            </div>
+          </div>
+        </aside>
+    
+        <footer class="footer section-divider" id="blur--footer">
+          <div class="foot-container grid--footer reveal">
+    
+            <div class="contact-col responsive-container ">
+    
+                    <img class="footer-img" src="assets/footer-img.svg" alt="Farewell, Reach Me Later!" >
+    
+                    <div class="contact-contents">
+    
+                      <div class="email-info info">
+                        <i class="fa-solid fa-envelope footer-icon"></i>
+                        <a class="contact-text" href=""><span class="__cf_email__" data-cfemail="6d05080101022d1e180a0c001e180f080904430e020043031d">@shresthasohan38@gmail.com</span></a>
+                      </div>
+                      
+                      <div class="phone-info info">
+                        <i class="fa-duotone fa-phone footer-icon"></i>
+                        <a class="contact-text" href="#">Request a Call!</a>
+                      </div>
+                      
+                      <p class="copyright">
+                        Copyright © <span class="year">2022</span> by Sohan Shrestha, 
+                        All rights reserved.
+                      </p>
+                    </div>
+            </div>
+    
+            <div class="other-col">
+    
+              <nav class="pages-col">
+                <p class="footer-heading ">Pages</p>
+                <ul class="footer-nav ">
+                  <li><a class="footer-link" href="#">Home</a></li>
+                  <li><a class="footer-link" href="#services">Services</a></li>
+                  <li><a class="footer-link" href="#">Projects</a></li>
+                  <li><a class="footer-link" href="#cta">Contact</a></li>
+                  <li><a class="footer-link" href="#about-me">About me</a></li>
+                  <li><a class="footer-link" href="#">Blog</a></li>
+                </ul>
+              </nav>
+    
+    
+              <nav class="socials-col">
+                <p class="footer-heading">Socials</p>
+                <ul class="footer-nav">
+                  <li><a class="footer-link footer-link-flex" href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter footer-icon-social"></i>Twitter</a></li>
+                  <li><a class="footer-link footer-link-flex" href="http://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin footer-icon-social"></i>LinkedIn</a></li>
+                  <li><a class="footer-link footer-link-flex" href="https://www.github.com" target="_blank"><i class="fa-brands fa-github footer-icon-social"></i>Github</a></li>
+                  <li><a class="footer-link footer-link-flex" href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook footer-icon-social"></i>Facebook</a></li>
+                  <li><a class="footer-link footer-link-flex" href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram footer-icon-social"></i>Instagram</a></li>
+                </ul>
+              </nav>
+    
+    
+              <nav class="address-col">
+                <p class="footer-heading">My Place</p>
+                <div class="footer-nav">
+    
+                  <a target="_blank" href="https://goo.gl/maps/F4c6wenwhAkYpGEW8" class="footer-link footer-link-flex line-height-max">Pokhara 11 - Kaski <br>Gandaki, Nepal </a>
+                  <a target="_blank" href="https://goo.gl/maps/F4c6wenwhAkYpGEW8" class="footer-link footer-link-flex"><i class="fa-solid fa-location-dot footer-icon-social"></i>View On Maps</a>
+                </div>
+              </nav>
+            </div>
+    
+          </div>
+        </footer> 
+       
 </body>
 </html>
