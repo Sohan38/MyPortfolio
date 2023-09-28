@@ -382,6 +382,7 @@ body {
 .service-img {
 	width: 9rem;
 	height: 9rem;
+	
 }
 
 .service-details {
@@ -894,4 +895,10 @@ body {
 
 .no-scroll {
 	overflow: hidden;
+}
+
+html {
+    
+	overflow-x: hidden;
+
 }
