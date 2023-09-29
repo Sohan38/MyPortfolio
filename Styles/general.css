@@ -152,7 +152,7 @@ body {
 }
 
 .heading-secondary {
-	color: #cfcfcf;
+	color: #ffffff;
 	font-size: 3.2rem;
 	font-weight: 600;
 	line-height: 1.5;
@@ -195,12 +195,12 @@ body {
 .btn--full:visited {
 	color: #fff;
 	font-weight: 600;
-	background-color: #6f2582;
+	background-color: #254c82;
 }
 
 .btn--full:hover,
 .btn--full:active {
-	background-color: #5e176f;
+	background-color: #1a4075;
 }
 
 .btn--outline {

@@ -129,15 +129,13 @@ function toggleBlur() {
 function openPopup() {
 	popup.classList.add("open-popup");
 	toggleBlur();
-	body.classList.add("no-scroll");
-	html.classList.add("no-scroll");
+	document.documentElement.style.overflow = "hidden";
 }
 
 function closePopup() {
 	popup.classList.remove("open-popup");
 	toggleBlur();
-	body.classList.remove("no-scroll");
-	html.classList.remove("no-scroll");
+	document.documentElement.style.overflow = "auto";
 }
 
 // Email Receive SMTP
@@ -159,11 +157,13 @@ document.getElementById("form").addEventListener("submit", function (event) {
 			date_time: datetime,
 		})
 		.then(function (res) {
-			openPopup();
-
+			
 			var form = document.getElementById("form");
 			form.reset();
+			openPopup();
 		});
+
+		
 });
 
 function checkFlexGap() {
