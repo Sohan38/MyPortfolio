@@ -1,10 +1,4 @@
 
-body {
-	font-family: "Rubik", sans-serif;
-	line-height: 1;
-	color: #b3b3b3;
-	position: relative;
-}
 
 
 
@@ -687,9 +681,9 @@ body {
 	gap: 4.6rem 18rem;
 	grid-template-columns: 0.4fr 0.6fr;
 	margin-top: 6.4rem;
-
 	justify-content: space-between;
 }
+
 .other-col {
 	padding-top: 3.2rem;
 	display: grid;
@@ -728,10 +722,10 @@ body {
 	color: #fff;
 	background: linear-gradient(
 		90deg,
-		#bd10c3,
-		#cd1590 29%,
-		#d2177e 58%,
-		#f3a3a3
+        #007bff,
+        #00bfff 29%,
+        #00d1ff 58%,
+        #a3e7ff
 	);
 	padding: 0.8rem;
 	border-radius: 50%;
@@ -740,7 +734,7 @@ body {
 .contact-text {
 	color: #fff;
 	font-weight: 500;
-	font-size: 2.4rem;
+	font-size: 2rem;
 	text-decoration: none;
 	transition: all 0.3s ease-out;
 }
@@ -792,11 +786,11 @@ body {
 }
 
 .footer-link-flex:hover {
-	color: #e419a1;
+	color: #00abf0;;
 }
 
 .contact-text:hover {
-	color: #d2177e;
+	color: #00abf0;;
 }
 
 .reveal {
