@@ -177,7 +177,7 @@ body {
 	letter-spacing: .1;
 	color: #0b0b0b;
 	text-decoration: none;
-	z-index: -1;
+	z-index: 1;
 	overflow: hidden;
 }
 
@@ -340,7 +340,7 @@ body {
 }
 
 .logo:hover {
-	color: #d2177e;
+	color: #00abf0;
 }
 
 .services-description {
