@@ -8,14 +8,6 @@ btnNavEl.addEventListener("click", function () {
 	navLinks.classList.toggle("gradient-text");
 });
 
-// const navLinks = document.querySelectorAll(".main-nav-links:link");
-
-// navLinks.forEach(function (navLink) {
-//   btnNavEl.addEventListener("click", function (e) {
-//     navLink.classList.toggle("gradient-text");
-//   });
-// });
-
 //Smooth Scrolling Animation (Any Browser)
 
 const allLinks = document.querySelectorAll("a:link");
@@ -39,11 +31,38 @@ allLinks.forEach(function (link) {
 
 		//Close Sidebar after click
 
-		if (link.classList.contains("main-nav-links")) {
+		if (link.classList.contains("nav-links")) {
 			headerEl.classList.toggle("nav-open");
 		}
 	});
 });
+
+
+//scroll sections
+
+let sections = document.querySelectorAll("section");
+let navLinks = document.querySelectorAll("header nav a")
+
+window.onscroll = () =>{
+    sections.forEach(sec =>{
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 100;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+
+        if (top >= offset && top < offset + height){
+            navLinks.forEach(links =>{
+                links.classList.remove('active');
+                let targetLink = document.querySelector('header nav a[href*='+id +']');
+                if (targetLink) {
+                    targetLink.classList.add('active');
+                }
+            })
+        }
+    })
+}
+
+
 
 //Sticky NavBar
 
