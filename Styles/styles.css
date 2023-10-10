@@ -314,6 +314,49 @@
 
 
 
+
+/* ABOUT ME SKILLS */
+
+.abt-me-img {
+	width: 100%;
+	height: 100%;
+}
+
+.section-about-me {
+	margin: 10rem 0 6rem 0;
+	padding: 2.4rem 0 4.2rem 0;
+}
+
+.about-me {
+	display: grid;
+	grid-template-columns: 0.35fr 0.65fr;
+	align-items: center;
+	justify-content: space-between;
+	gap: 9rem;
+	margin: 2.8rem 0 0 0;
+}
+
+.description-text-about {
+	color: #c0c0c0;
+	font-weight: 400;
+	font-size: 1.8rem;
+	margin-bottom: 4.8rem;
+}
+
+.about-me-text {
+	background-color: #0c263f;
+	padding: 1.8rem;
+	border-radius: 15px;
+}
+
+.about-me-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5.2rem;
+}
+
 /* SECTION SKILLS */
 
 .section-skills {
@@ -398,47 +441,6 @@
 	gap: 1rem;
 }
 
-/* ABOUT ME SKILLS */
-
-.abt-me-img {
-	width: 100%;
-	height: 100%;
-}
-
-.section-about-me {
-	margin: 10rem 0 6rem 0;
-	padding: 2.4rem 0 4.2rem 0;
-}
-
-.about-me {
-	display: grid;
-	grid-template-columns: 0.35fr 0.65fr;
-	align-items: center;
-	justify-content: space-between;
-	gap: 9rem;
-	margin: 2.8rem 0 0 0;
-}
-
-.description-text-about {
-	color: #c0c0c0;
-	font-weight: 400;
-	font-size: 1.8rem;
-	margin-bottom: 4.8rem;
-}
-
-.about-me-text {
-	background-color: #0c263f;
-	padding: 1.8rem;
-	border-radius: 15px;
-}
-
-.about-me-footer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin-top: 5.2rem;
-}
 
 
 /* SECTION CTA */
