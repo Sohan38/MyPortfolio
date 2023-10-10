@@ -188,7 +188,11 @@
 }
 
 .hero-btn .btn:hover {
-	color: #050505;
+    color: #050505;
+}
+
+.hero-btn .btn:nth-child(1):hover {
+    color: #00abf0;
 }
 
 .hero-btn .btn::before {
@@ -205,6 +209,7 @@
 
 .hero-btn .btn:hover::before {
 	width: 100%;
+	
 }
 
 .social-links{
