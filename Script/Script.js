@@ -39,28 +39,37 @@ allLinks.forEach(function (link) {
 
 
 //scroll sections
-
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a")
 
-window.onscroll = () =>{
-    sections.forEach(sec =>{
+window.onscroll = () => {
+    sections.forEach(sec => {
         let top = window.scrollY;
         let offset = sec.offsetTop - 100;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if (top >= offset && top < offset + height){
-            navLinks.forEach(links =>{
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
                 links.classList.remove('active');
-                let targetLink = document.querySelector('header nav a[href*='+id +']');
-                if (targetLink) {
-                    targetLink.classList.add('active');
-                }
-            })
+            });
+            
+            let targetLink = document.querySelector('header nav a[href*=' + id + ']');
+            if (targetLink) {
+                targetLink.classList.add('active');
+            }
         }
-    })
+    });
+
+    // If the top of the page, add 'active' to Home
+    if (window.scrollY === 0) {
+        let homeLink = document.querySelector('header nav a[href="#"]');
+        if (homeLink) {
+            homeLink.classList.add('active');
+        }
+    }
 }
+
 
 
 
@@ -184,3 +193,4 @@ function checkFlexGap() {
 }
 
 checkFlexGap();
+
